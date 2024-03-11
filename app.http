@@ -1,0 +1,8 @@
+@baseURL = http://localhost:3333
+
+# @name FetchNotifications
+GET {{baseURL}}/notifications HTTP/1.1
+
+### 
+# @name CreateNotification
+POST {{baseURL}}/notifications HTTP/1.1
