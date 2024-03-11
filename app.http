@@ -6,3 +6,10 @@ GET {{baseURL}}/notifications HTTP/1.1
 ### 
 # @name CreateNotification
 POST {{baseURL}}/notifications HTTP/1.1
+content-type: application/json
+
+{
+    "recipientId": "c7de073f-444e-403d-9c3a-858af8f9464f",
+    "content": "Laboris irure laborum consectetur exercitation ipsum voluptate enim ipsum commodo cillum cillum enim ipsum proident.",
+    "category": "reprehenderit"
+}
