@@ -1,11 +1,38 @@
 @baseURL = http://localhost:3333
+@recipientId = 5a23602f-a565-439b-8be8-3d47b20e83e9
+@notificationId = fa7fd3f2-72d5-48e9-8440-1a5c197e67ee
 
 # @name CreateNotification
 POST {{baseURL}}/notifications HTTP/1.1
 content-type: application/json
 
 {
-    "recipientId": "c7de073f-444e-403d-9c3a-858af8f9464f",
-    "content": "#3 Message example",
+    "recipientId": "5a23602f-a565-439b-8be8-3d47b20e83e9",
+    "content": "#6 Message example",
     "category": "social"
 }
+
+###
+
+# @name CountFromRecipientId
+GET {{baseURL}}/notifications/count/from/{{recipientId}}
+
+###
+
+# @name GetFromRecipientId
+GET {{baseURL}}/notifications/from/{{recipientId}}
+
+###
+
+# @name ReadNotification
+PATCH {{baseURL}}/notifications/{{notificationId}}/read
+
+###
+
+# @name UneadNotification
+PATCH {{baseURL}}/notifications/{{notificationId}}/unread
+
+###
+
+# @name CancelNotification
+PATCH {{baseURL}}/notifications/{{notificationId}}/cancel HTTP/1.1
