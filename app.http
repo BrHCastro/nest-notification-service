@@ -6,6 +6,6 @@ content-type: application/json
 
 {
     "recipientId": "c7de073f-444e-403d-9c3a-858af8f9464f",
-    "content": "#2 Message example",
+    "content": "#3 Message example",
     "category": "social"
 }
